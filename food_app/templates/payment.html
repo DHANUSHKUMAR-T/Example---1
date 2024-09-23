@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        button {
+            background-color: #f39c12;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e67e22;
+        }
+    </style>
+</head>
+<body>
+    <h1>Payment</h1>
+    <form action="{{ url_for('payment') }}" method="POST">
+        <label>
+            <input type="radio" name="payment_type" value="online" required> Online Payment
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="payment_type" value="offline" required> Offline Payment
+        </label>
+        <br><br>
+        <button type="submit">Continue</button>
+    </form>
+    <br><br>
+    <button onclick="location.href='{{ url_for('menu_page') }}'">Back to Menu</button>
+</body>
+</html>

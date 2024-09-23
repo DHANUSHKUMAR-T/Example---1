@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Menu</h1>
+        <a href="{{ url_for('western_food') }}"><button>Western Food</button></a>
+        <a href="{{ url_for('indian_food') }}"><button>Indian Food</button></a>
+        <a href="{{ url_for('home') }}"><button>Back to Home</button></a>
+    </div>
+</body>
+</html>
