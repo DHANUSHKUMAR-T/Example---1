@@ -17,8 +17,10 @@
             text-align: center;
         }
         img {
-            width: 100%;
-            height: auto;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
         }
         button {
             background-color: #f39c12;
@@ -40,7 +42,7 @@
                 <img src="{{ url_for('static', filename=details.image) }}" alt="{{ name }}">
                 <h2>{{ name }}</h2>
                 <p>{{ details.description }}</p>
-                <p>Price: ${{ details.price }}</p>
+                <p>Rs{{ details.price }}</p>
                 <input type="number" name="{{ name }}" min="0" value="0">
             </div>
         {% endfor %}

@@ -7,7 +7,6 @@
 <body>
     <div class="container">
         <h1>Welcome to Our Restaurant</h1>
-        <img src="{{ url_for('static', filename=random_image) }}" alt="Random Image">
         <button id="menuButton">Menu</button>
         <div id="menuOptions" style="display: none;">
             <a href="{{ url_for('western_food') }}"><button>Western Food</button></a>

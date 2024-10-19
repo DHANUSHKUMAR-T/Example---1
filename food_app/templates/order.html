@@ -57,19 +57,19 @@
                 <th>Item</th>
                 <th>Quantity</th>
                 <th>Price</th>
-                <th>Total</th>
+                <th>Total(Rs)</th>
             </tr>
             {% for item in ordered_items %}
             <tr>
                 <td>{{ item.name }}</td>
                 <td>{{ item.quantity }}</td>
-                <td>${{ item.price }}</td>
-                <td>${{ item.total }}</td>
+                <td>{{ item.price }}.00</td>
+                <td>{{ item.total }}.00</td>
             </tr>
             {% endfor %}
             <tr>
                 <td colspan="3" class="total"><strong>Grand Total</strong></td>
-                <td>${{ grand_total }}</td>
+                <td>{{ grand_total }}.00</td>
             </tr>
         </table>
         <button id="capture-btn">Download Screenshot</button>
