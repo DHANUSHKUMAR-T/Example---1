@@ -1,0 +1,96 @@
+#capture-btn {
+    background-color: yellow;  /* Makes the button yellow */
+    color: black;  /* Ensures text is readable */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px; /* Optional: Adds rounded corners */
+}
+
+#capture-btn:hover {
+    background-color: gold; /* Changes to gold when hovered */
+}
+
+body {
+    background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fkr.pinterest.com%2Fpin%2F731201689478693574%2F&psig=AOvVaw3QAUXsDMAnJ_Pu2xQd-2cs&ust=1739986348170000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCKj02rfgzYsDFQAAAAAdAAAAABAE");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Adds a slight dark overlay for readability */
+    color: white; /* Ensures text remains readable */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+
+h1, h2 {
+    color: #ff6347; /* Tomato color for headings */
+}
+
+button {
+    background-color: #ff6347; /* Tomato color for buttons */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #ff4500; /* Darker shade for hover */
+}
+
+a {
+    color: #ff6347;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.menu-item {
+    margin: 20px 0;
+}
+
+.menu-item img {
+    width: auto;
+    height: 80vh;
+    max-width: 100%;
+}
+footer {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+

@@ -1,0 +1,61 @@
+<!-- templates/payment_success.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Incorrect password. Please try again.</title>
+    <style>
+        body {
+            background-color:rgb(226, 43, 43); /* Violet color */
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin: 50px auto;
+            padding: 100px;
+            max-width: 400px;
+            background: rgba(0, 0, 0, 0.7); /* Adds slight transparency */
+            border-radius: 10px;
+            text-align: center;
+        }
+        h1 {
+            color: #ffcc00;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ffcc00;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+        }
+        .form-group button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #ffcc00;
+            color: #000;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .form-group button:hover {
+            background-color: #e6b800;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ error }}</h1>
+        <img src="{{ url_for('static', filename='WRONG.JPG') }}" alt="{{ name }}">
+    </div>
+</body>
+</html>

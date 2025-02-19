@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Food</title>
+    <style>
+        body {
+            background-color: #8A2BE2;
+            color: white;
+            text-align: center;
+        }
+        .item {
+            margin: 20px;
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+        }
+        img {
+            width: 200px;  /* Set image width to 200px */
+            height: 200px; /* Set image height to 200px */
+            object-fit: cover;  /* Ensures image doesn't distort, but covers 200x200 */
+            border-radius: 15px;  /* Adds rounded corners to the image */
+        }
+        button {
+            background-color: #f39c12;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e67e22;
+        }
+    </style>
+</head>
+<body>
+    <h1>Indian Food</h1>
+    <form action="{{ url_for('order') }}" method="POST">
+        {% for name, details in menu.items() %}
+            <div class="item">
+                <img src="{{ url_for('static', filename=details.image) }}" alt="{{ name }}">
+                <h2>{{ name }}</h2>
+                <p>{{ details.description }}</p>
+                <p>Rs: {{ details.price }}</p>
+                <input type="number" name="{{ name }}" min="0" value="0">
+            </div>
+        {% endfor %}
+        <br>
+        <button type="submit">Order</button>
+    </form>
+    <br><br>
+    <button onclick="location.href='{{ url_for('menu_page') }}'">Back to Menu</button>
+</body>
+</html>
